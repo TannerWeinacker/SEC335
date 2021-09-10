@@ -1,5 +1,5 @@
 # SEC335
 ## Tools
-* [ Passive Reconnaissance]
+* [[ Passive Reconnaissance]]
 ## Week 1
-* {Journal for Week 1}
+* [[Journal for Week 1]]
