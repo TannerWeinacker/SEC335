@@ -1,0 +1,16 @@
+#!/bin/bash
+
+hostfile=$1
+portfile=$2
+echo "host,port"
+if [ hostfile != "" ] && [ portfile != "" ]; then
+	for host in $(cat $hostfile); do
+	  for port in $(cat $portfile); do
+	    timeout .1 bash -c "echo >/dev/tcp/$host/$port" 2>/dev/null &&
+		echo "Host: $host Port: $port"
+	  done
+	done
+else
+	echo "Error in one or more of the files"
+fi
+
